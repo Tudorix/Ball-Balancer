@@ -16,7 +16,7 @@ PD control for plate stabilization
 ESP32
 3x SG90 servos
 Webcam
-Balancing plate (with a microfiber cloth on top to make the surface more grippy)
+Balancing plate with a microfiber cloth on top to increase grip
 Yellow ball
 Power supply
 Laptop for image processing
