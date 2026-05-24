@@ -1,41 +1,42 @@
-# Ball-Balancer
-![Ball-Balancer](Media/Final%20(1).jpeg)
+# Ball Balancer
 
-A ball balancing platform that uses three SG90 servos to tilt a plate and keep a yellow ball stable on top. The ball position is detected with a webcam, processed in Python on a laptop, and sent to an ESP32 through WebSockets, where a PD control loop adjusts the plate angle.
+![Ball Balancer](Media/Final%20(1).jpeg)
 
-Watch Demo: https://youtu.be/whYIulDktMQ
+A ball balancing platform built using an ESP32, three SG90 servos and computer vision.
 
-# Features
-3-servo balancing platform
-Webcam-based ball detection
-Python image processing
-ESP32 communication through WebSockets
-PD control for plate stabilization
+The system uses a webcam to track the position of a yellow ball on a tilting platform. A Python script processes the camera image and sends the ball coordinates to the ESP32 through Sockets, where a PD controller adjusts the platform angle to keep the ball balanced.
 
-# Hardware
-ESP32
-3x SG90 servos
-Webcam
-Balancing plate with a microfiber cloth on top to increase grip
-Yellow ball
-Power supply
-Laptop for image processing
+Watch demo: https://youtu.be/whYIulDktMQ
 
-![Ball-Balancer](Media/Final%20(2).jpeg)
+## What I learned
 
-# How it works
-A webcam captures the position of the ball on the plate. A Python script processes the image, detects the yellow ball, and computes its position. The position data is sent to the ESP32 through WebSockets. The ESP32 runs a PD control loop and adjusts the three servos to tilt the plate and keep the ball balanced.
+- Basic PD control systems
+- Real-time computer vision using Python and OpenCV
+- Communication between a laptop and ESP32 through WebSockets
+- Coordinating multiple servos for platform movement
+- Mechanical design and CAD modeling for balancing mechanisms
 
-# Setup
-Assemble the balancing platform
-Mount the three servos under the plate
-Connect the servos to the ESP32
-Run the Python ball detection script on the laptop
-Start communication between the laptop and the ESP32
-Power the system and tune the controller
+## Challenges
 
-# Notes
-Lighting conditions affect ball detection accuracy
-Servo calibration is important for stable balancing
-The PD controller can be tuned for smoother response
-This project combines computer vision, control systems, and embedded programming
+- Tuning the PD controller for stable balancing
+- Reducing servo jitter and oscillations
+- Handling camera latency and noisy position detection
+- Calibrating the platform and servo angles
+- Building joints and minimizing mechanical play
+
+## Limitations
+
+- SG90 servos are not very precise and introduce vibration
+- Webcam latency limits response speed
+- Lighting conditions affect ball detection accuracy
+- The balancing area is relatively small
+- Mechanical backlash reduces stability and repeatability
+
+## Possible Improvements
+
+- Using faster and more precise servos
+- Replacing the webcam with a higher quality and lower latency camera
+- Increasing the platform size for a larger balancing area
+- Using better ball joints and stronger mechanical components
+- Improving filtering and control algorithms for smoother motion
+- Running the image processing directly on embedded hardware
