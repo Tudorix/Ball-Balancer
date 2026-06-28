@@ -12,7 +12,7 @@ Watch demo: https://youtu.be/whYIulDktMQ
 
 - Basic PD control systems
 - Real-time computer vision using Python and OpenCV
-- Communication between a laptop and ESP32 through TCP Sockets
+- Communication between a laptop and ESP32 through Sockets
 - Coordinating multiple servos for platform movement
 - Mechanical design and CAD modeling for balancing mechanisms
 
